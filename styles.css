@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ---------- Part 1: CSS Transitions & Animations ---------- */
+
+/* Button hover transition */
+.fancy-btn {
+  padding: 12px 20px;
+  border: none;
+  background: linear-gradient(45deg, #6a5acd, #00bfff);
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.5s ease;
+  cursor: pointer;
+}
+.fancy-btn:hover {
+  transform: scale(1.2);
+  background: linear-gradient(45deg, #00bfff, #6a5acd);
+}
+
+/* Continuous pulse animation */
+.pulse-box {
+  width: 80px;
+  height: 80px;
+  background: coral;
+  margin: 20px auto;
+  border-radius: 10px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ---------- Part 3: Animation controlled by JS ---------- */
+.box {
+  width: 100px;
+  height: 100px;
+  background: teal;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+/* Slide animation triggered by JS */
+.slide {
+  animation: slideAcross 2s forwards;
+}
+
+@keyframes slideAcross {
+  0% { transform: translateX(0); background: teal; }
+  50% { transform: translateX(150px) rotate(45deg); background: gold; }
+  100% { transform: translateX(0) rotate(0); background: teal; }
+}
